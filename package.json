@@ -1,0 +1,22 @@
+{
+  "name": "restify_sample",
+  "version": "0.0.0",
+  "description": "restify_sample ==============",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Adron/restify_sample.git"
+  },
+  "author": "",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/Adron/restify_sample/issues"
+  },
+  "homepage": "https://github.com/Adron/restify_sample",
+  "dependencies": {
+    "restify": "^2.8.2"
+  }
+}
