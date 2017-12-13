@@ -1,5 +1,5 @@
 var restify = require('restify');
-
+require('events');
 function respond(req, res, next) {
   res.send('hello ' + req.params.name);
   next();
@@ -7,8 +7,12 @@ function respond(req, res, next) {
 
 var server = restify.createServer();
 server.get('/hello/:name', respond);
+server.get('/', function(req, res, next){
+  res.send('hello ');
+  next();
+});
 server.head('/hello/:name', respond);
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 9000;
 
 server.listen(port, function() {
   console.log('%s listening at %s', server.name, server.url);
